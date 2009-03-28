@@ -24,20 +24,37 @@ package com.mallardsoft.tuple;
  * TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE,
  * EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
-public class End implements SeparatedAppender, Comparable<End> {
-	
+
+/**
+ * A tuple terminator.
+ */
+public class End implements SeparatedAppender {
+	/** The singleton instance. */
 	private static End instance = new End();
 	
+	
+	/**
+     * Get the singleton instance.
+     * 
+     * @return The singleton instance.
+     */
 	public static End getInstance() {
 		return instance;
 	}
 
+	/**
+	 * Create a new tuple terminator.
+	 */
 	private End() { }
 
+    /**
+     * Terminate a string append by doing nothing.
+     * 
+     * @param buffer
+     *            The string buffer.
+     * @param separator
+     *            The string that separates the tuple values.
+     */
 	public void appendString(StringBuffer buffer, String separator) {
-	}
-
-	public int compareTo(End o) {
-		return 0;
 	}
 }
