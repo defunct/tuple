@@ -6,7 +6,7 @@
     <groupId>com.mallardsoft</groupId>
     <artifactId>tuple</artifactId>
     <packaging>jar</packaging>
-    <version>1.0</version>
+    <version>2.0${version.suffix}</version>
 
     <name>tuple</name>
     <description>Type-safe tuples.</description>
@@ -32,6 +32,20 @@
             <scope>test</scope>
         </dependency>
     </dependencies>
+
+    <distributionManagement>
+      <repository>
+        <id>ssh-repository</id>
+        <url>scpexe://ljubljana.blogometer.com${distribution.repository.path}</url>
+      </repository>
+    </distributionManagement>
+
+    <properties>
+        <site.javadoc.show>protected</site.javadoc.show>
+        <site.javadoc.visiblity>public</site.javadoc.visiblity>
+        <version.suffix>-SNAPSHOT</version.suffix>
+        <distribution.repository.path>/data/transient/www/static/goodworkalan/m2/snapshots</distribution.repository.path>
+    </properties>
 
     <build>
         <resources>

@@ -29,13 +29,16 @@ package com.mallardsoft.tuple;
  */
 
 /**
- * A tuple terminator.
+ * A tuple terminator. This class is provided as the <code>Rest</code> type
+ * parameter to the last <code>Tuple</code> instance in the list-like tuple type
+ * structure.
+ * 
+ * @author Michael L. Perry
  */
 public class End implements SeparatedAppender {
 	/** The singleton instance. */
 	private static End instance = new End();
-	
-	
+
 	/**
      * Get the singleton instance.
      * 

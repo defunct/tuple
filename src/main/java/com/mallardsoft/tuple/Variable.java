@@ -27,26 +27,58 @@ package com.mallardsoft.tuple;
  * TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE,
  * EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
+/**
+ * A reference to an object contained in a tuple.
+ * 
+ * @param <T>
+ *            The object type referenced by the variable.
+ */
 public class Variable<T> {
-
+    /** The referenced object. */
 	private T value;
 
+	/**
+	 * Create an empty variable.
+	 */
 	public Variable() {
 		this.value = null;
 	}
 
+    /**
+     * Create a reference to the given value.
+     * 
+     * @param value
+     *            The object value.
+     */
 	public Variable(T value) {
 		this.value = value;
 	}
 
+    /**
+     * Get the object value.
+     * 
+     * @return The object value.
+     */
 	public T get() {
 		return value;
 	}
 
+    /**
+     * Set the object value.
+     * 
+     * @param value
+     *            The object value.
+     */
 	public void set(T value) {
 		this.value = value;
 	}
 
+    /**
+     * Creates a string representation of the reference by delegating to the
+     * referenced object, if the referenced object is not null.
+     * 
+     * @return A string representation of the object.
+     */
 	public String toString() {
 		if (value == null)
 			return "null";

@@ -33,4 +33,7 @@ public class Pair<T1, T2> extends Tuple<T1, Tuple<T2, End>> {
 		super(m1, Tuple.from(m2));
 	}
 
+	public <Rest> Pair(Tuple<T1, Tuple<T2, Rest>> other) {
+	    super(other.first, Tuple.from(Tuple.get2(other)));
+	}
 }

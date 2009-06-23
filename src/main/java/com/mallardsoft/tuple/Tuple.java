@@ -51,23 +51,23 @@ package com.mallardsoft.tuple;
  */
 public class Tuple<First, Rest> implements SeparatedAppender {
 
-	private First first;
-	private Rest rest;
+     First first;
+      Rest rest;
 
 	public Tuple(First first, Rest rest) {
 		this.first = first;
 		this.rest = rest;
 	}
 
-	/**
-	 * Remove the first element from the tuple and return the rest.
-	 * To extract all elements from the tuple, chain extract calls.
-	 *
-	 * @param m
-	 * @return
-	 */
-	public Rest extract(Variable<First> m) {
-		m.set(first);
+    /**
+     * Remove the first element from the tuple and return the rest. To extract
+     * all elements from the tuple, chain extract calls.
+     * 
+     * @param variable A reference object that will retain the 
+     * @return The remainder of the in the list-like tuple type structure.
+     */
+	public Rest extract(Variable<First> variable) {
+		variable.set(first);
 		return rest;
 	}
 
