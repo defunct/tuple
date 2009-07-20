@@ -79,7 +79,7 @@ public class Tuple<First, Rest> implements SeparatedAppender {
 	public boolean equals(Object obj) {
         if (obj == null)
             return false;
-        if (!(obj instanceof Tuple))
+        if (!(obj instanceof Tuple<?, ?>))
             return false;
         Tuple<?, ?> that = (Tuple<?, ?>) obj;
         return
